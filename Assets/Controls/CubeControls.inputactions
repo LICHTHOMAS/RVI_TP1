@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "CubeControls",
+    "maps": [
+        {
+            "name": "Cube",
+            "id": "f3e82b3b-6f65-4540-a177-34319213ad71",
+            "actions": [
+                {
+                    "name": "Rotate",
+                    "type": "Button",
+                    "id": "fdbc2ce7-515e-45b0-83cc-62d82439fe50",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "10aa9e25-ab6e-4366-bbaf-4378e76d8c07",
+                    "path": "<Keyboard>/#(R)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
