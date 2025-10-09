@@ -10,14 +10,12 @@ IPointerDownHandler
 {
     public bool rotate = false;
     public float angularSpeed = 10.0f;
-    public float yeetStrength = 100000.0f;
+    public float yeetStrength = 100000000000000000.0f;
 
     private Renderer m_renderer;
     private Rigidbody m_rigidbody;
     private Color m_originalColor;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         m_renderer = this.GetComponent<Renderer>();
@@ -25,7 +23,6 @@ IPointerDownHandler
         m_originalColor = m_renderer.material.color;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (rotate) { this.transform.Rotate(new Vector3(0, angularSpeed * Time.deltaTime, 0)); }
@@ -44,7 +41,8 @@ IPointerDownHandler
     public void OnPointerDown(PointerEventData pointerEventData)
     {
         Debug.Log("Click !\n");
-        m_rigidbody.AddForce(Camera.main.transform.forward * yeetStrength);
-        rotate = !rotate;
+        Vector3 force = Camera.main.transform.forward * yeetStrength;
+        m_rigidbody.AddForce(force, ForceMode.Impulse);
+        //rotate = !rotate;
     }
 }
